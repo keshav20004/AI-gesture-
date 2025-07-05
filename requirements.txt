@@ -1,5 +1,6 @@
 streamlit
 cvzone
-opencv-python
+opencv-python-headless
+mediapipe
 numpy
-pillow
+Pillow
