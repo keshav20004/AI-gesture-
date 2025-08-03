@@ -1,93 +1,123 @@
-👋 Hand Gesture Controlled AI Math Solver
-This project is a real-time hand gesture-controlled drawing application that leverages OpenCV for video capture and hand tracking, and Google's Gemini AI model to solve math problems drawn on a virtual canvas. The application is built using Streamlit for a user-friendly web interface. It allows users to draw math equations using hand gestures, which are then interpreted by the Gemini AI model to provide solutions.
+# 👋 Hand Gesture Controlled AI Math Solver
 
-🚀 Key Features:
+A real-time hand-gesture-controlled drawing application that uses OpenCV for hand tracking and Google’s Gemini AI to **solve math problems drawn in the air** — all wrapped in a clean Streamlit UI.
 
-Real-time Hand Tracking: Utilizes OpenCV and cvzone to detect and track hand movements in real-time.
-Gesture Recognition: Interprets hand gestures to control drawing and trigger AI processing.
-Virtual Canvas: Creates an interactive drawing canvas using NumPy and OpenCV.
-AI-Powered Math Solving: Integrates with Google's Gemini AI model to solve math problems drawn on the canvas.
-Streamlit UI: Provides a user-friendly web interface for interacting with the application.
-Dynamic Drawing: Draws lines on the canvas based on the position of the index finger.
-Canvas Reset: Clears the canvas when only the thumb is raised.
-AI Trigger: Sends the canvas content to the Gemini AI model when all fingers except the thumb are raised.
-Webcam Integration: Seamlessly integrates with the user's webcam for real-time video input.
-🛠️ Tech Stack:
+---
 
-Category	Technology	Description
-Frontend	Streamlit	Web application framework for creating the user interface.
-Backend	Python	Programming language for the application logic.
-Vision	OpenCV (cv2)	Library for video capture, image processing, and drawing.
-cvzone	Computer vision library simplifying hand tracking.
-AI	Google Gemini AI	AI model for solving math problems.
-google.generativeai	Python library for interacting with the Gemini AI model.
-Data	NumPy	Library for numerical operations and canvas creation.
-PIL (Pillow)	Library for image format conversion for AI model compatibility.
-Other	os	Used for checking file existence.
-📦 Getting Started:
+## 🚀 Key Features
 
-Prerequisites
-Python 3.6+
-Ensure you have pip installed.
-Installation
-Clone the repository:
+- **Real-time Hand Tracking** – powered by OpenCV + cvzone  
+- **Gesture Recognition** – control drawing and AI triggering with finger poses  
+- **Virtual Drawing Canvas** – NumPy + OpenCV based  
+- **Gemini-Powered Math Solver** – sends drawings to Google Gemini to get answers  
+- **Streamlit UI** – simple web interface  
+- **Dynamic Drawing** – draw with index finger  
+- **Canvas Reset** – clear when only thumb is up  
+- **AI Trigger** – lift all fingers (except thumb) to send to AI  
+- **Webcam Integration** – works from your laptop camera  
 
+---
+
+## 🛠️ Tech Stack
+
+| Category   | Technology             | Description                                    |
+|-----------|------------------------|------------------------------------------------|
+| Frontend  | Streamlit              | Web UI                                         |
+| Backend   | Python                 | Application logic                              |
+| Vision    | OpenCV (cv2)           | Video capture, drawing                         |
+|           | cvzone                | Easier hand tracking                           |
+| AI        | Google Gemini AI       | Math solving                                   |
+|           | google-generativeai   | Python library to access Gemini                |
+| Data      | NumPy                  | Array ops + canvas                             |
+|           | Pillow (PIL)           | Convert images for Gemini                      |
+| Other     | os                     | File usage                                     |
+
+---
+
+## 📦 Getting Started
+
+### ✅ Prerequisites
+
+- Python 3.6+
+- pip
+
+### 🔧 Installation
+
+```bash
 git clone <repository_url>
 cd <repository_directory>
-Install the required packages:
-
 pip install -r requirements.txt
-Create a requirements.txt file with the following content:
+```
 
+`requirements.txt` should include:
+
+```
 streamlit
 opencv-python
 cvzone
 numpy
 google-generativeai
 pillow
-Set up Google Gemini AI API Key:
+```
 
-Obtain an API key from Google AI Studio.
+### 🔐 Set Up Gemini API Key
 
-Set the API key as an environment variable:
+- Get an API key from Google AI Studio.
+- Option 1 (recommended): export env variable
 
+```bash
 export GOOGLE_API_KEY="YOUR_API_KEY"
-Or, you can directly set it in your script (not recommended for security reasons):
+```
 
+- Option 2 (less secure):
+
+```python
 import google.generativeai as genai
 genai.configure(api_key="YOUR_API_KEY")
-Running Locally
-Run the Streamlit application:
+```
 
+### ▶️ Run Locally
+
+```bash
 streamlit run edit2.py
-Access the application:
+```
 
-Open your web browser and go to the URL displayed in the terminal (usually http://localhost:8501).
+Open the URL shown in terminal (usually `http://localhost:8501`)
 
-📂 Project Structure:
+---
 
-├── edit2.py               # Main application file
-├── requirements.txt      # List of Python dependencies
-├── .gitignore            # Specifies intentionally untracked files that Git should ignore
-├── README.md             # Project documentation
+## 📁 Project Structure
 
+```
+├── edit2.py            # Main Streamlit app
+├── requirements.txt    # Python dependencies
+├── .gitignore          # Ignore files
+└── README.md           # Documentation
+```
 
-🤝 Contributing:
+---
 
-Contributions are welcome! Please follow these steps:
+## 🤝 Contributing
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with descriptive messages.
-Submit a pull request.
-📝 License:
+1. Fork this repo  
+2. Make a new branch  
+3. Commit changes with good messages  
+4. Open a Pull Request  
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-📬 Contact:
+## 📝 License
 
-If you have any questions or suggestions, feel free to contact me at ikeshav62@gmai.com
+MIT
 
-💖 Thanks Message:
+---
 
-Thank you for checking out this project! I hope you find it useful and interesting. Your feedback and contributions are highly appreciated.
+## 📬 Contact
+
+Questions/suggestions → **ikeshav62@gmai.com**
+
+---
+
+## 💖 Thanks
+
+Thanks for checking this out — hope you like it! Feel free to send feedback or contribute 🙏
